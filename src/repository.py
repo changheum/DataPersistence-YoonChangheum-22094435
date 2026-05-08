@@ -10,7 +10,7 @@ class Repository(ABC):
         """엔티티를 저장하고 저장된 객체를 반환한다."""
 
     @abstractmethod
-    def find_by_id(self, id: str) -> Optional[dict]:
+    def find_by_id(self, entity_id: str) -> Optional[dict]:
         """ID로 엔티티를 조회한다. 없으면 None."""
 
     @abstractmethod
@@ -18,9 +18,9 @@ class Repository(ABC):
         """저장된 모든 엔티티를 반환한다."""
 
     @abstractmethod
-    def update(self, id: str, updates: dict) -> Optional[dict]:
+    def update(self, entity_id: str, updates: dict) -> Optional[dict]:
         """ID에 해당하는 엔티티를 수정하고 반환한다. 없으면 None."""
 
     @abstractmethod
-    def delete(self, id: str) -> bool:
+    def delete(self, entity_id: str) -> bool:
         """ID에 해당하는 엔티티를 삭제한다. 성공 여부를 반환한다."""

@@ -160,7 +160,7 @@ Phase 완료 시 Git push.
 | 1-Red | Sample CRUD 실패 테스트 작성 (`tests/test_sample_repository.py`) | ✅ 완료 |
 | 1-Green | 테스트 통과를 위한 최소 구현 (`src/json_repository.py`) | ✅ 완료 |
 | 1-Refactor | 추상 Repository 인터페이스 도입 (OCP), 커버리지 확인 | ✅ 완료 |
-| Git Push | Phase 1 완료 후 push | ⏳ 승인 대기 |
+| Git Push | Phase 1 완료 후 push | ✅ 완료 |
 
 **테스트 대상:**
 - `save(sample)` → 저장 후 반환
@@ -176,10 +176,10 @@ Phase 완료 시 Git push.
 
 | 단계 | 내용 | 상태 |
 |------|------|------|
-| 2-Red | Order CRUD 실패 테스트 작성 (`tests/test_order_repository.py`) | 🔲 대기 |
-| 2-Green | Order JSON 저장소 구현 | 🔲 대기 |
-| 2-Refactor | 최종 정리, 커버리지 ~100% 확인, prd-compliance-reviewer 실행 | 🔲 대기 |
-| Git Push | Phase 2 완료 후 push | 🔲 대기 |
+| 2-Red | Order CRUD 실패 테스트 작성 (`tests/test_order_repository.py`) | ✅ 완료 |
+| 2-Green | Order JSON 저장소 구현 | ✅ 완료 |
+| 2-Refactor | 최종 정리, 커버리지 ~100% 확인, prd-compliance-reviewer 실행 | ✅ 완료 |
+| Git Push | Phase 2 완료 후 push | ⏳ 승인 대기 |
 
 **테스트 대상:**
 - Sample과 동일한 CRUD

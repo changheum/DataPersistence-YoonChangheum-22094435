@@ -26,27 +26,27 @@ class JsonRepository(Repository):
         self._dump(data)
         return entity
 
-    def find_by_id(self, id: str) -> Optional[dict]:
+    def find_by_id(self, entity_id: str) -> Optional[dict]:
         for item in self._load():
-            if item.get(self._id_key) == id:
+            if item.get(self._id_key) == entity_id:
                 return item
         return None
 
     def find_all(self) -> list:
         return self._load()
 
-    def update(self, id: str, updates: dict) -> Optional[dict]:
+    def update(self, entity_id: str, updates: dict) -> Optional[dict]:
         data = self._load()
         for item in data:
-            if item.get(self._id_key) == id:
+            if item.get(self._id_key) == entity_id:
                 item.update(updates)
                 self._dump(data)
                 return item
         return None
 
-    def delete(self, id: str) -> bool:
+    def delete(self, entity_id: str) -> bool:
         data = self._load()
-        new_data = [item for item in data if item.get(self._id_key) != id]
+        new_data = [item for item in data if item.get(self._id_key) != entity_id]
         if len(new_data) == len(data):
             return False
         self._dump(new_data)
